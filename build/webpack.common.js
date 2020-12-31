@@ -17,8 +17,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: '[name].[hash:8].js',
-    chunkFilename: 'chunk/[name].[hash:8].js',
+    filename: '[name].[chunkhash:8].js',
+    chunkFilename: 'chunk/[name].[chunkhash:8].js',
   },
   module: {
     rules: [{
@@ -80,7 +80,7 @@ module.exports = {
               loader: 'file-loader',
               options: {
                 esModule:false,
-                name: 'img/[name].[hash:8].[ext]'
+                name: 'img/[name].[chunkhash:8].[ext]'
               }
             }
           }
@@ -97,7 +97,7 @@ module.exports = {
               loader: 'file-loader',
               options: {
                 esModule:false,
-                name: 'media/[name].[hash:8].[ext]'
+                name: 'media/[name].[chunkhash:8].[ext]'
               }
             }
           }
@@ -114,7 +114,7 @@ module.exports = {
               loader: 'file-loader',
               options: {
                 esModule:false,
-                name: 'fonts/[name].[hash:8].[ext]'
+                name: 'fonts/[name].[chunkhash:8].[ext]'
               }
             }
           }

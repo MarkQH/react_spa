@@ -26,7 +26,7 @@ function Recommend(props) {
 
   return (
     <Content play={songsCount}>
-      <div>推荐列表</div>
+      <div>推荐列表奥术大师</div>
       {enterLoading ? <></> : null}
       { renderRoutes(props.route.routes) }
     </Content>

@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -13,7 +13,7 @@ const config = merge(commonConfig, {
       filename: "[name].[contenthash:8].css",
       chunkFilename: "chunk/[id].[contenthash:8].css"
     }),
-    new webpack.HashedModuleIdsPlugin(),
+    new webpack.ids.HashedModuleIdsPlugin(),
     new CleanWebpackPlugin(),
   ],
   performance: {
